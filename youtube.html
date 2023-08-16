@@ -16,9 +16,10 @@
     <link rel="stylesheet" href="styles/video.css">
     <link rel="stylesheet" href="styles/sidebar.css">
 </head>
+
 <body>
 
-     <!-- Creating a header -->
+    <!-- Creating a header -->
     <!-- We can notice that they're being aligned vertically. 
     Because divs by default display block. So we need to set a flexbox-->
     <div class="header">
@@ -61,7 +62,7 @@
         </div>
     </div>
 
-        <!-- In HTML there are 3 types of elements.
+    <!-- In HTML there are 3 types of elements.
     1. block element = takes up the entire line.
     2. inline-block element = only takes up as much space as 
     needed and doesn't take up the entire line.   
@@ -74,36 +75,63 @@
 
  -->
 
- <div class="sidebar">
-    <div class="sidebar-link">
-        <img src="icons/home.svg">
-        <div>Home</div>
+    <div class="sidebar">
+        <div class="sidebar-link">
+            <img src="icons/home.svg">
+            <div>Home</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="icons/explore.svg">
+            <div>Explore</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="icons/subscriptions.svg">
+            <div>Subscriptions</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="icons/originals.svg">
+            <div>Originals</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="icons/youtube-music.svg">
+            <div>YouTube music</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="icons/library.svg">
+            <div>Library</div>
+        </div>
     </div>
-    <div class="sidebar-link">
-        <img src="icons/explore.svg">
-        <div>Explore</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="icons/subscriptions.svg">
-        <div>Subscriptions</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="icons/originals.svg">
-        <div>Originals</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="icons/youtube-music.svg">
-        <div>YouTube music</div>
-    </div>
-    <div class="sidebar-link">
-        <img src="icons/library.svg">
-        <div>Library</div>
-    </div>
-</div>
+
+
+    <!-- creating a container for a grid -->
+    <div class="video-grid">
+
+        <div class="video-preview">
+            <!-- Creating vertical layout -->
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnail/music-production1.jpeg">
+                <div class="video-time">14:20</div>
+            </div>
+
+            <!-- Creating a container -->
+            <div class="video-info-grid">
+                <!-- Creating horizontal layout -->
+                <!-- Making inline-block so they will appear next to each other-->
+                <div class="channel-picture">
+                    <img class="profile-picture" src="images/me.jpeg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title"> How to Become a Music Producer </p>
+                    <p class="video-author"> The Producer </p>
+                    <p class="video-stats"> 3.4M views &#183; 6 months ago </p>
+                </div>
+            </div>
+        </div>
 
 
 
 
-    
+
 </body>
+
 </html>
