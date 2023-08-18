@@ -1,0 +1,151 @@
+
+
+/* 2. let's start by switching from inline-block => block */
+.thumbnail {
+    /* we mind notice that it doesn't resize, because we set a width */
+    /* width: 300px; */
+    width: 100%;
+    /* display: block; */
+    /* height: 300px; */
+    /*to keep the shape of the image*/
+    /* object-fit: contain;
+    object-position: right;
+    object-position: top;
+    object-position: bottom; */
+
+    /* to see what's happening*/
+
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: red; */
+}
+
+.video-title {
+    /* width: 300px; */
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 500;
+    /* space between lines */
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.video-preview {
+    /* we mind notice that it doesn't resize, because we set a width */
+    /* width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px; */
+}
+
+/* Creating a grid */
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+
+}
+
+/* We created a grid */
+/* .channel-picture {
+    display: inline-block;
+    width: 50px;
+    vertical-align: top;
+    background-color: gray;
+}
+
+.video-info {
+    display: inline-block;
+    width: 200px;
+    background-color: gray;
+} */
+
+.profile-picture {
+    /* width: 50px; */
+    /* takes entire space of the container */
+    width: 35px;
+    border-radius: 50px;
+}
+
+.thumbnail-row {
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+.video-author,
+.video-stats {
+    font-size: 14px;
+    color: rgb(96, 96, 96);
+
+}
+
+.video-author {
+    margin-bottom: 4px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+/* To make responsive we use Medeia Query 
+The CSS will only active if the screen size 
+is 750px or less  as an example
+*/
+@media (max-width: 750px) {
+    .video-grid {
+        /*That means from a screen size of 0 to 750px
+        we're only going to have 2 columns*/
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+@media (min-width: 751px) and (max-width: 1299px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr ;
+
+    }
+
+}
+
+@media (min-width: 1300px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+
+}
+/* 1. let's start by switching from block => inline-block */
+/* by default paragraphs are display block */
+/* .video-author,
+.video-stats {
+    display: inline-block;
+} */
+
+.video-time {
+    background-color: black;
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    font-weight: 500;
+
+    /* we need position absolute inside relative */
+    position: absolute;
+    bottom: 10px;
+    right: 8px;
+    /* padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding: 4px 4px 4xp 4px; */
+    padding: 4xp;
+    /*similar to margin*/
+    /* margin: 4px 4px 4xp 4xp; */
+    border-radius: 2px;
+
+}
