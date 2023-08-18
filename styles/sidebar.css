@@ -1,0 +1,50 @@
+.sidebar {
+    /* with position fixed the element is no longer on the page 
+    anymore and it doesn't have a background */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    background-color: white;
+    width: 72px;
+    z-index: 200;
+    padding-top: 5px;
+
+}
+
+.sidebar-link {
+    height: 74px;
+    display: flex;
+    /* when flex-direction: column; this 
+    2 properties are switched*/
+    justify-content: center;
+    align-items: center;
+
+    /* flex-direction: row; causes our 
+    elements to be displayed horizontally
+    
+    flex-direction: column; displays 
+    our elements vertically
+    */
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 12px;
+
+}
+
+.sidebar-link:hover {
+    background-color: rgb(235, 235, 235)
+}
+
+.sidebar-link img {
+    height: 24px;
+    /* vertical alignment*/
+    align-items: center;
+    /*horizontally cenetered*/
+    margin-bottom: 5px;
+}
+
+.sidebar-link div {
+    font-size: 10px;
+
+}
