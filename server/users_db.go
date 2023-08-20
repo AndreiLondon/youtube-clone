@@ -70,3 +70,16 @@ func resetSessionId(sessionId string) error {
 	}
 	return nil
 }
+
+func setSessionId(user *User, sessionId string) error {
+	statement, err := db.Prepare("UPDATE users SET sessionId = ? WHERE id = ?")
+	if err != nil {
+		return err
+	}
+	defer statement.Close()
+	_, err = statement.Exec(sessionId, user.Id)
+	if err != nil {
+		return err
+	}
+	return nil
+}
