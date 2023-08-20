@@ -58,3 +58,15 @@ func getUserBySessionId(sessionId string) *User {
 	}
 	return user
 }
+func resetSessionId(sessionId string) error {
+	statement, err := db.Prepare("UPDATE users SET sessionId = ? WHERE sessionId = ?")
+	if err != nil {
+		return err
+	}
+	defer statement.Close()
+	_, err = statement.Exec("", sessionId)
+	if err != nil {
+		return err
+	}
+	return nil
+}
