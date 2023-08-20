@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"strings"
 
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -18,5 +19,18 @@ func crerateUsersTable() error {
 	}
 	defer statement.Close()
 	statement.Exec()
+	return nil
+}
+
+func saveUser(username string, email string, password string, sessionId string) error {
+	statement, err := db.Prepare("INSERT INTO users (email, username, password, sessionId) VALUES(?, ?, ?, ?)")
+	if err != nil {
+		return err
+	}
+	defer statement.Close()
+	_, err = statement.Exec(strings.ToLower(email), username, password, sessionId)
+	if err != nil {
+		return err
+	}
 	return nil
 }
