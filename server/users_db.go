@@ -34,3 +34,27 @@ func saveUser(username string, email string, password string, sessionId string) 
 	}
 	return nil
 }
+
+func getUserBySessionId(sessionId string) *User {
+	if strings.TrimSpace(sessionId) == "" {
+		return nil
+	}
+	rows, err := db.Query("SELECT * FROM users WHERE sessionId = ? LIMIT 1", sessionId)
+	if err != nil {
+		return nil
+	}
+	defer rows.Close()
+	var user *User = nil
+	for rows.Next() {
+		user = &User{}
+		err = rows.Scan(&(user.Id), &(user.Email), &(user.Username), &(user.Password), &(user.Sessionid))
+		if err != nil {
+			return nil
+		}
+	}
+	err = rows.Err()
+	if err != nil {
+		return nil
+	}
+	return user
+}
