@@ -83,3 +83,26 @@ func setSessionId(user *User, sessionId string) error {
 	}
 	return nil
 }
+
+func checkUser(email string, password string) (*User, error) {
+	rows, err := db.Query("SELECT * FROM users WHERE email = ?", email)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	for rows.Next() {
+		user := User{}
+		err = rows.Scan(&(user.Id), &(user.Email), &(user.Username), &(user.Password), &(user.Sessionid))
+		if err != nil {
+			return nil, err
+		}
+		if compairPasswords(user.Password, password) {
+			return &user, nil
+		}
+	}
+	err = rows.Err()
+	if err != nil {
+		return nil, err
+	}
+	return nil, nil
+}
