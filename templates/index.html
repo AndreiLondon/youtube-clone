@@ -11,10 +11,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="general.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="video.css">
-    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="/static/css/general.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/video.css">
+    <link rel="stylesheet" href="/static/css/sidebar.css">
 </head>
 
 <body>
@@ -24,41 +24,41 @@
     Because divs by default display block. So we need to set a flexbox-->
     <div class="header">
         <div class="left-section">
-            <img class="hamburger-menu" src="icons/hamburger-menu.svg">
-            <img class="youtube-logo" src="icons/youtube-logo.svg">
+            <img class="hamburger-menu" src="/static/icons/hamburger-menu.svg">
+            <img class="youtube-logo" src="static/icons/youtube-logo.svg">
 
         </div>
         <div class="middle-section">
             <!-- Creating a Search Bar -->
             <input class="search-bar" type="text" placeholder="Search">
             <button class="search-button">
-                <img class="search-icon" src="icons/search.svg">
+                <img class="search-icon" src="/static/icons/search.svg">
                 <!-- position absolute inside relative -->
                 <div class="tooltip">Search</div>
             </button>
             <button class="voice-search-button">
-                <img class="voice-search-icon" src="icons/voice-search-icon.svg">
+                <img class="voice-search-icon" src="/static/icons/voice-search-icon.svg">
                 <div class="tooltip">Search with your voice</div>
             </button>
             <!-- void element doesn't require a closing tag -->
         </div>
         <div class="right-section">
-            <div class="upload-icon-container"><img class="upload-icon" src="icons/upload.svg">
+            <div class="upload-icon-container"><img class="upload-icon" src="/static/icons/upload.svg">
                 <div class="tooltip">Create</div>
             </div>
             <div class="youtube-apps-icon-container">
-                <img class="youtube-apps-icon" src="icons/youtube-apps.svg">
+                <img class="youtube-apps-icon" src="/static/icons/youtube-apps.svg">
                 <div class="tooltip">Toolbar</div>
             </div>
 
             <!-- making the notofifcation on top of element is 
             position: absolute inside position relative -->
             <div class="notitfications-icon-container">
-                <img class="notifications-icon" src="icons/notifications.svg">
+                <img class="notifications-icon" src="/static/icons/notifications.svg">
                 <div class="tooltip">Notifications</div>
                 <div class="notifications-count">3</div>
             </div>
-            <img class="current-user-picture" src="icons/me.jpeg">
+            <img class="current-user-picture" src="/static/icons/me.jpeg">
         </div>
     </div>
 
@@ -77,27 +77,27 @@
 
     <div class="sidebar">
         <div class="sidebar-link">
-            <img src="icons/home.svg">
+            <img src="/static/icons/home.svg">
             <div>Home</div>
         </div>
         <div class="sidebar-link">
-            <img src="icons/explore.svg">
+            <img src="/static/icons/explore.svg">
             <div>Explore</div>
         </div>
         <div class="sidebar-link">
-            <img src="icons/subscriptions.svg">
+            <img src="/static/icons/subscriptions.svg">
             <div>Subscriptions</div>
         </div>
         <div class="sidebar-link">
-            <img src="icons/originals.svg">
+            <img src="/static/icons/originals.svg">
             <div>Originals</div>
         </div>
         <div class="sidebar-link">
-            <img src="icons/youtube-music.svg">
+            <img src="/static/icons/youtube-music.svg">
             <div>YouTube music</div>
         </div>
         <div class="sidebar-link">
-            <img src="icons/library.svg">
+            <img src="/static/icons/library.svg">
             <div>Library</div>
         </div>
     </div>
@@ -109,7 +109,7 @@
         <div class="video-preview">
             <!-- Creating vertical layout -->
             <div class="thumbnail-row">
-                <img class="thumbnail" src="music-production1.jpeg">
+                <img class="thumbnail" src="/static/icons/music-production1.jpeg">
                 <div class="video-time">14:20</div>
             </div>
 
@@ -118,7 +118,7 @@
                 <!-- Creating horizontal layout -->
                 <!-- Making inline-block so they will appear next to each other-->
                 <div class="channel-picture">
-                    <img class="profile-picture" src="images/me.jpeg" alt="">
+                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
                 </div>
                 <div class="video-info">
                     <p class="video-title"> How to Become a Music Producer </p>
@@ -130,12 +130,12 @@
 
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="music-production2.jpeg">
+                <img class="thumbnail" src="/static/icons/music-production2.jpeg">
                 <div class="video-time">3:54</div>
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
-                    <img class="profile-picture" src="images/me.jpeg" alt="">
+                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
                 </div>
                 <div class="video-info">
                     <p class="video-title"> How to Relaease Your First LP</p>
@@ -147,7 +147,7 @@
         <div class="video-preview">
             <!-- Creating vertical layout -->
             <div class="thumbnail-row">
-                <img class="thumbnail" src="music-production1.jpeg">
+                <img class="thumbnail" src="/static/icons/music-production1.jpeg">
                 <div class="video-time">21:23</div>
             </div>
             <!-- Creating a container -->
@@ -155,7 +155,7 @@
                 <!-- Creating horizontal layout -->
                 <!-- Making inline-block so they will appear next to each other-->
                 <div class="channel-picture">
-                    <img class="profile-picture" src="images/me.jpeg" alt="">
+                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
                 </div>
                 <div class="video-info">
                     <p class="video-title"> How to Become a Music Producer </p>
@@ -166,12 +166,12 @@
         </div>
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="music-production2.jpeg">
+                <img class="thumbnail" src="/static/icons/music-production2.jpeg">
                 <div class="video-time">19:34</div>
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
-                    <img class="profile-picture" src="images/me.jpeg" alt="">
+                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
                 </div>
                 <div class="video-info">
                     <p class="video-title"> How to Relaease Your First LP</p>
@@ -184,7 +184,7 @@
         <div class="video-preview">
             <!-- Creating vertical layout -->
             <div class="thumbnail-row">
-                <img class="thumbnail" src="music-production1.jpeg">
+                <img class="thumbnail" src="/static/icons/music-production1.jpeg">
                 <div class="video-time">17:40</div>
             </div>
             <!-- Creating a container -->
@@ -192,7 +192,7 @@
                 <!-- Creating horizontal layout -->
                 <!-- Making inline-block so they will appear next to each other-->
                 <div class="channel-picture">
-                    <img class="profile-picture" src="images/me.jpeg" alt="">
+                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
                 </div>
                 <div class="video-info">
                     <p class="video-title"> How to Become a Music Producer </p>
@@ -204,12 +204,12 @@
 
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="music-production2.jpeg">
+                <img class="thumbnail" src="/static/icons/music-production2.jpeg">
                 <div class="video-time">13:10</div>
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
-                    <img class="profile-picture" src="images/me.jpeg" alt="">
+                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
                 </div>
                 <div class="video-info">
                     <p class="video-title"> How to Relaease Your First LP</p>
@@ -222,7 +222,7 @@
         <div class="video-preview">
             <!-- Creating vertical layout -->
             <div class="thumbnail-row">
-                <img class="thumbnail" src="music-production1.jpeg">
+                <img class="thumbnail" src="/static/icons/music-production1.jpeg">
                 <div class="video-time">17:40</div>
             </div>
             <!-- Creating a container -->
@@ -230,7 +230,7 @@
                 <!-- Creating horizontal layout -->
                 <!-- Making inline-block so they will appear next to each other-->
                 <div class="channel-picture">
-                    <img class="profile-picture" src="images/me.jpeg" alt="">
+                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
                 </div>
                 <div class="video-info">
                     <p class="video-title"> How to Become a Music Producer </p>
@@ -242,12 +242,12 @@
 
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="music-production2.jpeg">
+                <img class="thumbnail" src="/static/icons/music-production2.jpeg">
                 <div class="video-time">13:10</div>
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
-                    <img class="profile-picture" src="images/me.jpeg" alt="">
+                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
                 </div>
                 <div class="video-info">
                     <p class="video-title"> How to Relaease Your First LP</p>

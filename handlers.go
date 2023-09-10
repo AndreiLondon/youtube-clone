@@ -13,9 +13,9 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	invalidCredentialsFlagSignUp = ""
 	invalidCredentialsFlagSignIn = ""
-
-	sessionId := getCookie(r)
-	user := getUserBySessionId(sessionId)
+	indexObject := IndexObject{}
+	// sessionId := getCookie(r)
+	// videos := getUserBySessionId(sessionId)
 
 	templ, err := template.ParseFiles("templates/index.html")
 	if err != nil {

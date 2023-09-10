@@ -12,3 +12,7 @@ type SingCredentials struct {
 	SignIn string
 	SignUp string
 }
+
+type IndexObject struct {
+	User *User
+}

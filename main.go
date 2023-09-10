@@ -31,7 +31,7 @@ func main() {
 	http.ListenAndServe(":9000", nil)
 }
 func createTables() {
-	err := crerateUsersTable()
+	err := createUsersTable()
 	if err != nil {
 		log.Fatal(err)
 	}
