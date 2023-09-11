@@ -1,65 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube.com Clone</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/general.css">
-    <link rel="stylesheet" href="/static/css/header.css">
-    <link rel="stylesheet" href="/static/css/video.css">
-    <link rel="stylesheet" href="/static/css/sidebar.css">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/general.css" />
+    <link rel="stylesheet" href="/static/css/header.css" />
+    <link rel="stylesheet" href="/static/css/video.css" />
+    <link rel="stylesheet" href="/static/css/sidebar.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Creating a header -->
     <!-- We can notice that they're being aligned vertically. 
     Because divs by default display block. So we need to set a flexbox-->
     <div class="header">
-        <div class="left-section">
-            <img class="hamburger-menu" src="/static/icons/hamburger-menu.svg">
-            <img class="youtube-logo" src="static/icons/youtube-logo.svg">
-
+      <div class="left-section">
+        <img class="hamburger-menu" src="/static/icons/hamburger-menu.svg" />
+        <img class="youtube-logo" src="static/icons/youtube-logo.svg" />
+      </div>
+      <div class="middle-section">
+        <!-- Creating a Search Bar -->
+        <input class="search-bar" type="text" placeholder="Search" />
+        <button class="search-button">
+          <img class="search-icon" src="/static/icons/search.svg" />
+          <!-- position absolute inside relative -->
+          <div class="tooltip">Search</div>
+        </button>
+        <button class="voice-search-button">
+          <img
+            class="voice-search-icon"
+            src="/static/icons/voice-search-icon.svg"
+          />
+          <div class="tooltip">Search with your voice</div>
+        </button>
+        <!-- void element doesn't require a closing tag -->
+      </div>
+      <div class="right-section">
+        <div class="upload-icon-container">
+          <img class="upload-icon" src="/static/icons/upload.svg" />
+          <div class="tooltip">Create</div>
         </div>
-        <div class="middle-section">
-            <!-- Creating a Search Bar -->
-            <input class="search-bar" type="text" placeholder="Search">
-            <button class="search-button">
-                <img class="search-icon" src="/static/icons/search.svg">
-                <!-- position absolute inside relative -->
-                <div class="tooltip">Search</div>
-            </button>
-            <button class="voice-search-button">
-                <img class="voice-search-icon" src="/static/icons/voice-search-icon.svg">
-                <div class="tooltip">Search with your voice</div>
-            </button>
-            <!-- void element doesn't require a closing tag -->
+        <div class="youtube-apps-icon-container">
+          <img class="youtube-apps-icon" src="/static/icons/youtube-apps.svg" />
+          <div class="tooltip">Toolbar</div>
         </div>
-        <div class="right-section">
-            <div class="upload-icon-container"><img class="upload-icon" src="/static/icons/upload.svg">
-                <div class="tooltip">Create</div>
-            </div>
-            <div class="youtube-apps-icon-container">
-                <img class="youtube-apps-icon" src="/static/icons/youtube-apps.svg">
-                <div class="tooltip">Toolbar</div>
-            </div>
 
-            <!-- making the notofifcation on top of element is 
+        <!-- making the notofifcation on top of element is 
             position: absolute inside position relative -->
-            <div class="notitfications-icon-container">
-                <img class="notifications-icon" src="/static/icons/notifications.svg">
-                <div class="tooltip">Notifications</div>
-                <div class="notifications-count">3</div>
-            </div>
-            <img class="current-user-picture" src="/static/icons/me.jpeg">
+        <div class="notitfications-icon-container">
+          <img
+            class="notifications-icon"
+            src="/static/icons/notifications.svg"
+          />
+          <div class="tooltip">Notifications</div>
+          <div class="notifications-count">3</div>
         </div>
+        <!-- <img class="current-user-picture" src="/static/icons/me.jpeg"> -->
+
+        <form action="/signout">
+          <img class="current-user-picture" src="/static/icons/me.jpeg" />
+          <input type="image" src="/static/icons/exit_icon.png" alt="Sign Out" width="20" height="20">
+          <!-- <input type="image" src="/static/icons/exit_icon.png" alt="Sign Out"> -->
+          <button class="sign-out-button">Sign Out</button>
+        </form>
+      </div>
     </div>
 
     <!-- In HTML there are 3 types of elements.
@@ -76,190 +88,184 @@
  -->
 
     <div class="sidebar">
-        <div class="sidebar-link">
-            <img src="/static/icons/home.svg">
-            <div>Home</div>
-        </div>
-        <div class="sidebar-link">
-            <img src="/static/icons/explore.svg">
-            <div>Explore</div>
-        </div>
-        <div class="sidebar-link">
-            <img src="/static/icons/subscriptions.svg">
-            <div>Subscriptions</div>
-        </div>
-        <div class="sidebar-link">
-            <img src="/static/icons/originals.svg">
-            <div>Originals</div>
-        </div>
-        <div class="sidebar-link">
-            <img src="/static/icons/youtube-music.svg">
-            <div>YouTube music</div>
-        </div>
-        <div class="sidebar-link">
-            <img src="/static/icons/library.svg">
-            <div>Library</div>
-        </div>
+      <div class="sidebar-link">
+        <img src="/static/icons/home.svg" />
+        <div>Home</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="/static/icons/explore.svg" />
+        <div>Explore</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="/static/icons/subscriptions.svg" />
+        <div>Subscriptions</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="/static/icons/originals.svg" />
+        <div>Originals</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="/static/icons/youtube-music.svg" />
+        <div>YouTube music</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="/static/icons/library.svg" />
+        <div>Library</div>
+      </div>
     </div>
-
 
     <!-- creating a container for a grid -->
     <div class="video-grid">
-
-        <div class="video-preview">
-            <!-- Creating vertical layout -->
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="/static/icons/music-production1.jpeg">
-                <div class="video-time">14:20</div>
-            </div>
-
-            <!-- Creating a container -->
-            <div class="video-info-grid">
-                <!-- Creating horizontal layout -->
-                <!-- Making inline-block so they will appear next to each other-->
-                <div class="channel-picture">
-                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
-                </div>
-                <div class="video-info">
-                    <p class="video-title"> How to Become a Music Producer </p>
-                    <p class="video-author"> The Producer </p>
-                    <p class="video-stats"> 3.4M views &#183; 6 months ago </p>
-                </div>
-            </div>
+      <div class="video-preview">
+        <!-- Creating vertical layout -->
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="/static/icons/music-production1.jpeg" />
+          <div class="video-time">14:20</div>
         </div>
 
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="/static/icons/music-production2.jpeg">
-                <div class="video-time">3:54</div>
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
-                </div>
-                <div class="video-info">
-                    <p class="video-title"> How to Relaease Your First LP</p>
-                    <p class="video-author"> The Producer </p>
-                    <p class="video-stats"> 5.2M views &#183; 8 months ago </p>
-                </div>
-            </div>
+        <!-- Creating a container -->
+        <div class="video-info-grid">
+          <!-- Creating horizontal layout -->
+          <!-- Making inline-block so they will appear next to each other-->
+          <div class="channel-picture">
+            <img class="profile-picture" src="/static/icons/me.jpeg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">How to Become a Music Producer</p>
+            <p class="video-author">The Producer</p>
+            <p class="video-stats">3.4M views &#183; 6 months ago</p>
+          </div>
         </div>
-        <div class="video-preview">
-            <!-- Creating vertical layout -->
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="/static/icons/music-production1.jpeg">
-                <div class="video-time">21:23</div>
-            </div>
-            <!-- Creating a container -->
-            <div class="video-info-grid">
-                <!-- Creating horizontal layout -->
-                <!-- Making inline-block so they will appear next to each other-->
-                <div class="channel-picture">
-                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
-                </div>
-                <div class="video-info">
-                    <p class="video-title"> How to Become a Music Producer </p>
-                    <p class="video-author"> The Producer </p>
-                    <p class="video-stats"> 3.4M views &#183; 6 months ago </p>
-                </div>
-            </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="/static/icons/music-production2.jpeg" />
+          <div class="video-time">3:54</div>
         </div>
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="/static/icons/music-production2.jpeg">
-                <div class="video-time">19:34</div>
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
-                </div>
-                <div class="video-info">
-                    <p class="video-title"> How to Relaease Your First LP</p>
-                    <p class="video-author"> The Producer </p>
-                    <p class="video-stats"> 5.2M views &#183; 8 months ago </p>
-                </div>
-            </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="/static/icons/me.jpeg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">How to Relaease Your First LP</p>
+            <p class="video-author">The Producer</p>
+            <p class="video-stats">5.2M views &#183; 8 months ago</p>
+          </div>
         </div>
-
-        <div class="video-preview">
-            <!-- Creating vertical layout -->
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="/static/icons/music-production1.jpeg">
-                <div class="video-time">17:40</div>
-            </div>
-            <!-- Creating a container -->
-            <div class="video-info-grid">
-                <!-- Creating horizontal layout -->
-                <!-- Making inline-block so they will appear next to each other-->
-                <div class="channel-picture">
-                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
-                </div>
-                <div class="video-info">
-                    <p class="video-title"> How to Become a Music Producer </p>
-                    <p class="video-author"> The Producer </p>
-                    <p class="video-stats"> 3.4M views &#183; 6 months ago </p>
-                </div>
-            </div>
+      </div>
+      <div class="video-preview">
+        <!-- Creating vertical layout -->
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="/static/icons/music-production1.jpeg" />
+          <div class="video-time">21:23</div>
         </div>
-
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="/static/icons/music-production2.jpeg">
-                <div class="video-time">13:10</div>
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
-                </div>
-                <div class="video-info">
-                    <p class="video-title"> How to Relaease Your First LP</p>
-                    <p class="video-author"> The Producer </p>
-                    <p class="video-stats"> 5.2M views &#183; 8 months ago </p>
-                </div>
-            </div>
+        <!-- Creating a container -->
+        <div class="video-info-grid">
+          <!-- Creating horizontal layout -->
+          <!-- Making inline-block so they will appear next to each other-->
+          <div class="channel-picture">
+            <img class="profile-picture" src="/static/icons/me.jpeg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">How to Become a Music Producer</p>
+            <p class="video-author">The Producer</p>
+            <p class="video-stats">3.4M views &#183; 6 months ago</p>
+          </div>
         </div>
-
-        <div class="video-preview">
-            <!-- Creating vertical layout -->
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="/static/icons/music-production1.jpeg">
-                <div class="video-time">17:40</div>
-            </div>
-            <!-- Creating a container -->
-            <div class="video-info-grid">
-                <!-- Creating horizontal layout -->
-                <!-- Making inline-block so they will appear next to each other-->
-                <div class="channel-picture">
-                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
-                </div>
-                <div class="video-info">
-                    <p class="video-title"> How to Become a Music Producer </p>
-                    <p class="video-author"> The Producer </p>
-                    <p class="video-stats"> 3.4M views &#183; 6 months ago </p>
-                </div>
-            </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="/static/icons/music-production2.jpeg" />
+          <div class="video-time">19:34</div>
         </div>
-
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="/static/icons/music-production2.jpeg">
-                <div class="video-time">13:10</div>
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="/static/icons/me.jpeg" alt="">
-                </div>
-                <div class="video-info">
-                    <p class="video-title"> How to Relaease Your First LP</p>
-                    <p class="video-author"> The Producer </p>
-                    <p class="video-stats"> 5.2M views &#183; 8 months ago </p>
-                </div>
-            </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="/static/icons/me.jpeg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">How to Relaease Your First LP</p>
+            <p class="video-author">The Producer</p>
+            <p class="video-stats">5.2M views &#183; 8 months ago</p>
+          </div>
         </div>
+      </div>
 
+      <div class="video-preview">
+        <!-- Creating vertical layout -->
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="/static/icons/music-production1.jpeg" />
+          <div class="video-time">17:40</div>
+        </div>
+        <!-- Creating a container -->
+        <div class="video-info-grid">
+          <!-- Creating horizontal layout -->
+          <!-- Making inline-block so they will appear next to each other-->
+          <div class="channel-picture">
+            <img class="profile-picture" src="/static/icons/me.jpeg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">How to Become a Music Producer</p>
+            <p class="video-author">The Producer</p>
+            <p class="video-stats">3.4M views &#183; 6 months ago</p>
+          </div>
+        </div>
+      </div>
 
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="/static/icons/music-production2.jpeg" />
+          <div class="video-time">13:10</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="/static/icons/me.jpeg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">How to Relaease Your First LP</p>
+            <p class="video-author">The Producer</p>
+            <p class="video-stats">5.2M views &#183; 8 months ago</p>
+          </div>
+        </div>
+      </div>
 
+      <div class="video-preview">
+        <!-- Creating vertical layout -->
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="/static/icons/music-production1.jpeg" />
+          <div class="video-time">17:40</div>
+        </div>
+        <!-- Creating a container -->
+        <div class="video-info-grid">
+          <!-- Creating horizontal layout -->
+          <!-- Making inline-block so they will appear next to each other-->
+          <div class="channel-picture">
+            <img class="profile-picture" src="/static/icons/me.jpeg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">How to Become a Music Producer</p>
+            <p class="video-author">The Producer</p>
+            <p class="video-stats">3.4M views &#183; 6 months ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="/static/icons/music-production2.jpeg" />
+          <div class="video-time">13:10</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="/static/icons/me.jpeg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">How to Relaease Your First LP</p>
+            <p class="video-author">The Producer</p>
+            <p class="video-stats">5.2M views &#183; 8 months ago</p>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
